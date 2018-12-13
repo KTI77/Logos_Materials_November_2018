@@ -11,13 +11,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="online_course@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="online_course@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="TeacherEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="212">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,8 +52,8 @@
       <file leaf-file-name="CourseEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/CourseEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="53">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,14 +61,100 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="230">
+              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherDetailsEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherDetailsEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-382">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentCourseEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentCourseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.SCHEMA:online_course" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.SCHEMA:online_course">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.SCHEMA:online_course</OriginalElement>
+              <nodes>
+                <node x="376.0" y="191.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.students</node>
+                <node x="89.5" y="0.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers</node>
+                <node x="183.00000000000003" y="169.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teacher_details</node>
+                <node x="0.0" y="169.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses</node>
+                <node x="190.25" y="360.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses">
+                  <point x="-40.74999999999997" y="-48.5" />
+                  <point x="231.0" y="335.0" />
+                  <point x="81.5" y="335.0" />
+                  <point x="0.0" y="70.5" />
+                </edge>
+                <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.students">
+                  <point x="40.75000000000003" y="-48.5" />
+                  <point x="312.5" y="335.0" />
+                  <point x="462.0" y="335.0" />
+                  <point x="0.0" y="48.5" />
+                </edge>
+                <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teacher_details" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers">
+                  <point x="0.0" y="-70.5" />
+                  <point x="269.5" y="144.0" />
+                  <point x="218.5" y="144.0" />
+                  <point x="43.0" y="59.5" />
+                </edge>
+                <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers">
+                  <point x="0.0" y="-70.5" />
+                  <point x="81.5" y="144.0" />
+                  <point x="132.5" y="144.0" />
+                  <point x="-43.0" y="59.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0999999999999999" x="-87.2922077922079" y="205.18181818181822" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -84,10 +194,14 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/CourseEntity.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/ua/logos/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherDetailsEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentCourseEntity.java" />
       </list>
     </option>
   </component>
@@ -126,6 +240,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -188,13 +303,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -288,40 +403,42 @@
       <workItem from="1544445279070" duration="4000" />
       <workItem from="1544466987064" duration="5158000" />
       <workItem from="1544477882512" duration="6000" />
+      <workItem from="1544639681173" duration="5913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9853000" />
+    <option name="totallyTimeSpent" value="15766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.20362474" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.25746268" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31277058" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.20362474" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3116883" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3409091" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14765458" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Database Console" weight="0.26839826" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.31277058" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -337,6 +454,53 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/CourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -429,26 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/CourseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -459,10 +603,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/CourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5e06c5a0-e5ef-4621-bbfa-af02fb033d9f</OriginalElement>
+          <nodes>
+            <node x="" y="">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses</node>
+            <node x="" y="">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="86.0" y="171.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="230">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/TeacherDetailsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-382">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.SCHEMA:online_course">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.SCHEMA:online_course</OriginalElement>
+          <nodes>
+            <node x="376.0" y="191.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.students</node>
+            <node x="89.5" y="0.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers</node>
+            <node x="183.00000000000003" y="169.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teacher_details</node>
+            <node x="0.0" y="169.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses</node>
+            <node x="190.25" y="360.0">5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses">
+              <point x="-40.74999999999997" y="-48.5" />
+              <point x="231.0" y="335.0" />
+              <point x="81.5" y="335.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.student_course" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.students">
+              <point x="40.75000000000003" y="-48.5" />
+              <point x="312.5" y="335.0" />
+              <point x="462.0" y="335.0" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teacher_details" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers">
+              <point x="0.0" y="-70.5" />
+              <point x="269.5" y="144.0" />
+              <point x="218.5" y="144.0" />
+              <point x="43.0" y="59.5" />
+            </edge>
+            <edge source="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.courses" target="5e06c5a0-e5ef-4621-bbfa-af02fb033d9f.TABLE:online_course.teachers">
+              <point x="0.0" y="-70.5" />
+              <point x="81.5" y="144.0" />
+              <point x="132.5" y="144.0" />
+              <point x="-43.0" y="59.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0999999999999999" x="-87.2922077922079" y="205.18181818181822" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/logos/entity/StudentCourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

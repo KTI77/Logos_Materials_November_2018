@@ -3,12 +3,15 @@ package ua.logos.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString(callSuper = true, exclude = {"courses", "teacherDetails"})
 
 @Entity
 @Table(name = "teachers") // teacher_entity
@@ -26,4 +29,10 @@ public class TeacherEntity extends BaseEntity {
 
     @Column(nullable = false, length = 100, unique = true)
     private String email;
+
+    @OneToMany(mappedBy = "teacher")
+    private List<CourseEntity> courses;
+
+    @OneToOne(mappedBy = "teacher")
+    private TeacherDetailsEntity teacherDetails;
 }

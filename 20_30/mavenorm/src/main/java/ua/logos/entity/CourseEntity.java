@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString(callSuper = true)
+@ToString(callSuper = true, exclude = "teacher")
 
 @Entity
 @Table(name = "courses")
@@ -29,4 +29,8 @@ public class CourseEntity extends BaseEntity { // course_entity
 
     @Column(nullable = false, columnDefinition = "DECIMAL(5,2)")
     private BigDecimal price;
+
+    @ManyToOne
+    @JoinColumn(name = "teacher_id")
+    private TeacherEntity teacher;
 }
