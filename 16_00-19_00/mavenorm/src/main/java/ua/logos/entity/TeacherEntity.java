@@ -1,22 +1,30 @@
 package ua.logos.entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
+@ToString(callSuper = true,
+        exclude = {"courses", "teacherDetails"}
+        )
+
 
 @Entity
 @Table(name = "teachers")
-public class TeacherEntity { // teacher_entity
+public class TeacherEntity extends BaseEntity { // teacher_entity
 
+   /*
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    */
 
     @Column(name = "first_name", nullable = false, length = 45)
     private String firstName;// first_name varchar(45) not null
@@ -26,6 +34,12 @@ public class TeacherEntity { // teacher_entity
 
     @Column(nullable = false, unique = true, length = 120)
     private String email;
+
+    @OneToMany(mappedBy = "teacher")
+    private List<CourseEntity> courses;
+
+    @OneToOne(mappedBy = "teacher", fetch = FetchType.LAZY)
+    private TeacherDetailsEntity teacherDetails;
 
     /*
     public TeacherEntity() {

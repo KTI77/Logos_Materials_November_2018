@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,11 +16,13 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "courses")
-public class CourseEntity {
+public class CourseEntity extends BaseEntity {
 
+    /*
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    */
 
     @Column(nullable = false, length = 180)
     private String title;
@@ -32,4 +35,15 @@ public class CourseEntity {
 
     @Column(length = 50)
     private String image;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "teacher_id")
+    private TeacherEntity teacher;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity category;
+
+    @OneToMany(mappedBy = "course")
+    private List<StudentCourseEntity> studentCourses;
 }
