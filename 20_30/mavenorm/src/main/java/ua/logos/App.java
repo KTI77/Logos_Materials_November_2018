@@ -1,5 +1,7 @@
 package ua.logos;
 
+import ua.logos.dao.CourseDAO;
+import ua.logos.dao.TeacherDAO;
 import ua.logos.entity.CourseEntity;
 import ua.logos.entity.TeacherEntity;
 
@@ -16,9 +18,59 @@ public class App {
                 Persistence.createEntityManagerFactory("logos");
         EntityManager em = factory.createEntityManager();
 
+        TeacherDAO teacherDAO = new TeacherDAO(em);
+        CourseDAO courseDAO = new CourseDAO(em);
+
+        TeacherEntity teacherEntity = new TeacherEntity();
+        teacherEntity.setFirstName("John");
+        teacherEntity.setLastName("Doe");
+        teacherEntity.setEmail("john.doe@gmail.com");
+
+        TeacherEntity teacherEntity2 = new TeacherEntity();
+        teacherEntity2.setFirstName("Tom");
+        teacherEntity2.setLastName("Tompson");
+        teacherEntity2.setEmail("tom@gmail.com");
+
+        CourseEntity courseEntity = new CourseEntity();
+        courseEntity.setTitle("MySQL");
+        courseEntity.setPrice(new BigDecimal(99.99));
+        courseEntity.setDescription("empty...");
+
+        CourseEntity courseEntity1 = new CourseEntity();
+        courseEntity1.setTitle("Spring Boot 2");
+        courseEntity1.setPrice(new BigDecimal(199.99));
+        courseEntity1.setDescription("empty...");
+
         em.getTransaction().begin();
 
-        /*TeacherEntity teacher = new TeacherEntity();
+        if (teacherDAO.countTeachers() == 0) {
+            teacherDAO.saveTeacher(teacherEntity);
+            teacherDAO.saveTeacher(teacherEntity2);
+
+            courseDAO.createCourse(courseEntity, teacherEntity);
+            courseDAO.createCourse(courseEntity1, teacherEntity);
+
+        }
+
+        courseDAO.findAllCourses().forEach(System.out::println);
+
+        courseDAO.findAllCoursesByTeacherId(1L).forEach(System.out::println);
+
+        //teacherDAO.findAllTeachers().forEach(System.out::println);
+        //System.out.println(teacherDAO.findTeacherById(1L));
+
+        //teacherDAO.deleteTeacherById(2L);
+        //teacherDAO.findAllTeachers().forEach(System.out::println);
+        //teacherDAO.findTeacherById(2L);
+
+        em.getTransaction().commit();
+
+        em.close();
+        factory.close();
+    }
+}
+
+ /*TeacherEntity teacher = new TeacherEntity();
         teacher.setFirstName("John");
         teacher.setLastName("Doe");
         teacher.setEmail("john.doe@gmail.com");
@@ -55,10 +107,3 @@ public class App {
                         .getSingleResult();
         System.out.println(course);
 */
-
-        em.getTransaction().commit();
-
-        em.close();
-        factory.close();
-    }
-}

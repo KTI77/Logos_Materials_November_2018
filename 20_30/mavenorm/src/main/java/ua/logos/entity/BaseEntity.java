@@ -2,10 +2,7 @@ package ua.logos.entity;
 
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @Data
 @MappedSuperclass
@@ -14,5 +11,8 @@ public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "is_deleted", columnDefinition = "boolean DEFAULT FALSE")
+    private boolean isDeleted;
 
 }

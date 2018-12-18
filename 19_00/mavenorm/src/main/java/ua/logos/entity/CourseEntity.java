@@ -28,4 +28,7 @@ public class CourseEntity extends BaseEntity {
     @Column(name = "price", columnDefinition = "DECIMAL(5,2) DEFAULT 0", nullable = false)
     private BigDecimal price;
 
+    @ManyToOne
+    @JoinColumn(name = "teacher_id")
+    private TeacherEntity teacher;
 }

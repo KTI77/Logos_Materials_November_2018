@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,6 +27,12 @@ public class TeacherEntity extends BaseEntity { // teacher_entity
 
     @Column(name = "email", nullable = false, length = 100, unique = true)
     private String email;
+
+    @OneToMany(mappedBy = "teacher")
+    private List<CourseEntity> courses;
+
+    @OneToOne(mappedBy = "teacher")
+    private TeacherDetailsEntity teacherDetails;
 
     /*public TeacherEntity() {
     }*/
