@@ -11,4 +11,6 @@ public interface TeacherService {
     TeacherEntity findTeacherById(Long id);
 
     List<TeacherEntity> findAllTeachers();
+
+    TeacherEntity updateTeacherById(Long id, TeacherEntity teacherToUpdate);
 }

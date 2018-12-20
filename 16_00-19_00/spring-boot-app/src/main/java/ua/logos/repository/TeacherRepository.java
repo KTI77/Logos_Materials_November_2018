@@ -12,4 +12,6 @@ public interface TeacherRepository
     //@Query("SELECT t FROM TeacherEntity t WHERE t.email = :email")
     TeacherEntity findByEmail(String email);
 
+    boolean existsById(Long id);
+    boolean existsByEmail(String email);
 }

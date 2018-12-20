@@ -21,8 +21,13 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public TeacherEntity findTeacherById(Long id) {
-        TeacherEntity teacherEntity = teacherRepository.findById(id).get();
-        return teacherEntity;
+        boolean exists = teacherRepository.existsById(id);
+        if (exists) {
+            TeacherEntity teacherEntity = teacherRepository.findById(id).get();
+            return teacherEntity;
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -30,5 +35,22 @@ public class TeacherServiceImpl implements TeacherService {
         List<TeacherEntity> teacherEntities =
                 teacherRepository.findAll();
         return teacherEntities;
+    }
+
+    @Override
+    public TeacherEntity updateTeacherById(Long id, TeacherEntity teacherToUpdate) {
+        boolean exists = teacherRepository.existsById(id);
+        boolean existsByEmail = teacherRepository.existsByEmail(teacherToUpdate.getEmail());
+
+        if (!exists || existsByEmail) {
+            return null;
+        }
+
+        TeacherEntity teacherFromDB = teacherRepository.findById(id).get();
+        teacherFromDB.setFirstName(teacherToUpdate.getFirstName());
+        teacherFromDB.setLastName(teacherToUpdate.getLastName());
+        teacherFromDB.setEmail(teacherToUpdate.getEmail());
+        teacherRepository.save(teacherFromDB);
+        return teacherFromDB;
     }
 }
