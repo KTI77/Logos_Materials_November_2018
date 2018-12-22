@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -24,4 +22,8 @@ public class PilotEntity extends BaseEntity {
 
     @Column(nullable = false, unique = true)
     private int number;
+
+    @ManyToOne
+    @JoinColumn(name = "team_id", nullable = false)
+    private TeamEntity team;
 }

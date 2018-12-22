@@ -31,4 +31,31 @@ public class TeamController {
         List<TeamEntity> teams = teamService.findAllTeams();
         return new ResponseEntity<>(teams, HttpStatus.OK);
     }
+
+    @GetMapping("{teamId}")
+    public ResponseEntity<?> findById(
+            @PathVariable("teamId") Long id
+    ) {
+        TeamEntity team = teamService.findTeamById(id);
+
+        if (team == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(team, HttpStatus.OK);
+    }
+
+    @PutMapping("{teamId}")
+    public ResponseEntity<?> updateTeam(
+            @PathVariable("teamId") Long id,
+            @RequestBody TeamEntity teamEntity
+    ) {
+        TeamEntity team = teamService.updateTeam(id, teamEntity);
+
+        if (team == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        return new ResponseEntity<>(team, HttpStatus.OK);
+    }
 }

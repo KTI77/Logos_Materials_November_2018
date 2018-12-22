@@ -8,4 +8,7 @@ import ua.logos.entity.TeamEntity;
 public interface TeamRepository
         extends JpaRepository<TeamEntity, Long> {
 
+    // select count(*) from teams where id = ?
+    boolean existsById(Long id);
+
 }

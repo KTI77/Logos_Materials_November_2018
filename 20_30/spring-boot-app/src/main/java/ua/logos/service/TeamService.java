@@ -9,4 +9,8 @@ public interface TeamService {
     void createTeam(TeamEntity team);
 
     List<TeamEntity> findAllTeams();
+
+    TeamEntity findTeamById(Long id);
+
+    TeamEntity updateTeam(Long id, TeamEntity entityToUpdate);
 }
