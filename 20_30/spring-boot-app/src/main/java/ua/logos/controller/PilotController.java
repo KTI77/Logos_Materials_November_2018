@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ua.logos.domain.PilotDTO;
 import ua.logos.entity.PilotEntity;
 import ua.logos.service.PilotService;
 
@@ -17,14 +18,14 @@ public class PilotController {
     private PilotService pilotService;
 
     @PostMapping
-    public ResponseEntity<?> createPilot(@RequestBody PilotEntity pilot) {
+    public ResponseEntity<?> createPilot(@RequestBody PilotDTO pilot) {
         pilotService.savePilot(pilot);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping
     public ResponseEntity<?> getPilots() {
-        List<PilotEntity> pilots = pilotService.findAllPilots();
+        List<PilotDTO> pilots = pilotService.findAllPilots();
         return new ResponseEntity<>(pilots, HttpStatus.OK);
     }
 

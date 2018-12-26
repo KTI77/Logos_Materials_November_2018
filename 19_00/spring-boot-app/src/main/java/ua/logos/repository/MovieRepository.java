@@ -8,4 +8,6 @@ import ua.logos.entity.MovieEntity;
 public interface MovieRepository
         extends JpaRepository<MovieEntity, Long> {
 
+    // select count(*) from movies WHERE movie.id = 5;
+    boolean existsById(Long id);
 }

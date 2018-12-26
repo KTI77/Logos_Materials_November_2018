@@ -1,16 +1,16 @@
 package ua.logos.service;
 
-import ua.logos.entity.TeamEntity;
+import ua.logos.domain.TeamDTO;
 
 import java.util.List;
 
 public interface TeamService {
 
-    void createTeam(TeamEntity team);
+    void createTeam(TeamDTO team);
 
-    List<TeamEntity> findAllTeams();
+    List<TeamDTO> findAllTeams();
 
-    TeamEntity findTeamById(Long id);
+    TeamDTO findTeamById(Long id);
 
-    TeamEntity updateTeam(Long id, TeamEntity entityToUpdate);
+    TeamDTO updateTeam(Long id, TeamDTO entityToUpdate);
 }

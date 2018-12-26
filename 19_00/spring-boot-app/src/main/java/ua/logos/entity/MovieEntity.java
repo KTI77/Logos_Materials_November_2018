@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -22,12 +20,16 @@ public class MovieEntity extends BaseEntity {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column(nullable = false)
-    private String category;
+//    @Column(nullable = false)
+//    private String category;
 
     @Column(nullable = false)
     private String duration;
 
     @Column(name = "age_rating", nullable = false)
     private String ageRating;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity category;
 }
