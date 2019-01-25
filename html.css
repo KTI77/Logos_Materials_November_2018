@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 3. Forms/pages</title>
+	</head>
+	
+	<body>
+		
+		<form action="">
+			<fieldset>
+				<legend>Анкета учасника опитування</legend>
+				
+				<label for="username">Введіть ваше імя:</label>
+				<input type="text" id="username" placeholder="введіть імя">
+				<br>
+				
+				<label for="user-email">Введіть ваш email:</label>
+				<input type="email" id="user-email" placeholder="введіть email">
+				<br>
+				
+				<label for="user-password">Введіть ваш пароль:</label>
+				<input type="password" id="user-password">
+				<br>
+				
+				<label for="user-experiance">Ваш досвід на посаді програміста:</label>
+				<input type="number" id="user-experiance">
+				<br>
+				
+				<label for="user-birthday">Вкажіть дату народження:</label>
+				<input type="date" id="user-birthday">
+				<br>
+				
+				<label for="user-month">Вкажіть коли ви почали працювати:</label>
+				<input type="month" id="user-month">
+				<br>
+				
+				<label for="user-color">Вкажуть ваш улюблений колір:</label>
+				<input type="color" id="user-color">
+				<br>
+				
+				<label>Виберіть технології з якими ви працювали:</label>
+				<br>
+					<input type="checkbox" id="technology-1">
+					<label for="technology-1">HTML</label>
+					
+					<input type="checkbox" id="technology-2">
+					<label for="technology-2">CSS</label>
+					
+					<input type="checkbox" id="technology-3" checked>
+					<label for="technology-3">Java Script</label>
+					
+					<input type="checkbox" id="technology-4">
+					<label for="technology-4">Java</label>
+				<br>
+				
+				<label>Вкажіть вашу стать:</label>
+				<br>
+				<input type="radio" id="male" name="user-sex" checked>
+				<label for="male">Чоловік</label>
+				
+				<input type="radio" id="female" name="user-sex">
+				<label for="female">Жінка</label>
+			</fieldset>
+			<br>
+			
+			<fieldset>
+				<label for="user-pet">Вкажіть вашого домашнього улюбленця:</label>
+				<select id="user-pet" multiple>
+					<option>Собака</option>
+					<option>Кіт</option>
+					<option>Хомяк</option>
+					<option>Єнот</option>
+				</select>
+			</fieldset>
+			<br>
+			<fieldset>
+				<label for="user-about">Розкажіть кілька слів про себе:</label>
+				<br>
+				<textarea id="user-about" rows="5" cols="73">
+					Опишіть свій карєрний шлях
+				</textarea>
+			</fieldset>
+			
+			<fieldset>
+				<input type="submit" value="Наідслати результат">
+				
+				<input type="button" value="Кнопка">
+				<!--<button type="submit">Кнопка через тег</button>-->
+				<button type="button">Кнопка через тег</button>
+			</fieldset>
+		</form>
+		
+		<br>
+		<hr>
+		<a href="user.html" target="_blank">Відкрити профіль користувача</a>
+		
+		<br><br>
+		<a href="https://www.google.com" target="_blank">
+			Go to Google</a>
+	</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User page</title>
+	</head>
+	
+	<body style="background-color: seashell;">
+		
+		<h1 style="color: red; text-align: center;">Lorem Ipsum</h1>
+		<h2 style="color: yellow; text-align: right;">Why do we use it?</h2>
+		<h3 style="color: #fdf000; text-align: left;">Where does it come from?</h3>
+		
+		<p style="background-color: tomato; color: white; text-align: justify;">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+		</p>
+
+		<p style="border: 1px solid dodgerblue;">
+			It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+
+		<p style="background-image: url(https://www.freewebheaders.com/wordpress/wp-content/gallery/cute-headers/cute-puppy-on-grey-background-header-800x200.jpg); color: white;">
+			Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+		</p>
+
+
+		<p>
+			<span style="text-decoration: overline;">dummy</span>
+			<span style="text-decoration: line-through;">passages</span>
+			<span style="text-decoration: underline;">generators</span>
+			<span style="text-transform: uppercase;">handful</span>
+			<span style="text-transform: lowercase;">therefore</span>
+			<span style="text-transform: capitalize;">Contrary to popular belief</span>
+		</p>
+
+		<hr>
+
+		<p style="text-indent: 30px;">
+			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+		</p>
+
+		<p style="text-indent: 30px; text-align: justify;">
+			Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+		</p>
+
+		<h2 style="text-align: center; letter-spacing: 20px;">Letter spacing</h2>
+
+		<h2 style="word-spacing: 20px;">I have 10000 followers in istagram</h2>
+
+		<h3 style="text-shadow: 10px 5px silver;">Цей надпис має тінь</h3>
+
+	</body>
+</html>
+
