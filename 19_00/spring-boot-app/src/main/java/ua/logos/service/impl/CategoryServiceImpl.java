@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.logos.domain.CategoryDTO;
 import ua.logos.entity.CategoryEntity;
+import ua.logos.exceptions.AlreadyExistsException;
+import ua.logos.exceptions.NotFoundException;
 import ua.logos.repository.CategoryRepository;
 import ua.logos.service.CategoryService;
+import ua.logos.utils.ObjectMapperUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,14 +19,17 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private ObjectMapperUtils modelMapper;
+
     @Override
     public CategoryDTO save(CategoryDTO category) {
         boolean exists = categoryRepository.existsByNameIgnoreCase(category.getName());
         if (exists) {
-            return null;
+            throw new AlreadyExistsException("Category with name [" + category.getName() + "] already exists");
         }
 
-        CategoryEntity categoryEntity = dtoToEntityMapper(category);
+        CategoryEntity categoryEntity = modelMapper.map(category, CategoryEntity.class);// dtoToEntityMapper(category);
         categoryRepository.save(categoryEntity);
         category.setId(categoryEntity.getId());
         return category;
@@ -32,36 +38,44 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<CategoryDTO> findAll() {
         List<CategoryEntity> categoryEntities = categoryRepository.findAll();
-        List<CategoryDTO> categoryDTOS = new ArrayList<>();
 
-        for (CategoryEntity entity : categoryEntities) {
-            CategoryDTO categoryDTO = entityToDTOMapper(entity);
-            categoryDTOS.add(categoryDTO);
-        }
+        List<CategoryDTO> categoryDTOS = modelMapper.mapAll(categoryEntities, CategoryDTO.class);
+
+//        for (CategoryEntity entity : categoryEntities) {
+//            CategoryDTO categoryDTO = entityToDTOMapper(entity);
+//            categoryDTOS.add(categoryDTO);
+//        }
         return categoryDTOS;
     }
 
     @Override
     public CategoryDTO findByCategoryId(Long id) {
-        boolean exists = categoryRepository.existsById(id);
-        if (!exists) {
-            return null;
-        }
+//        boolean exists = categoryRepository.existsById(id);
+//        if (!exists) {
+//            throw new NotFoundException("Category with id[" + id + "] not found");
+//        }
 
-        CategoryEntity categoryEntity = categoryRepository.findById(id).get();
+        CategoryEntity categoryEntity = categoryRepository.findById(id)
+                .orElseThrow(
+                        () -> new NotFoundException("Category with id[" + id + "] not found")
+                );
 
-        CategoryDTO categoryDTO = entityToDTOMapper(categoryEntity);
+        CategoryDTO categoryDTO = modelMapper.map(categoryEntity, CategoryDTO.class);//entityToDTOMapper(categoryEntity);
         return categoryDTO;
     }
 
     @Override
     public CategoryDTO findByCategoryName(String name) {
 
-        return null;
+        CategoryEntity categoryEntity = categoryRepository.findByNameIgnoreCase(name)
+                .orElseThrow(
+                        () -> new NotFoundException("Category with name[" + name + "] not found")
+                );
+        return modelMapper.map(categoryEntity, CategoryDTO.class);
     }
 
 
-    private CategoryDTO entityToDTOMapper(CategoryEntity categoryEntity) {
+/*    private CategoryDTO entityToDTOMapper(CategoryEntity categoryEntity) {
         CategoryDTO categoryDTO = new CategoryDTO();
         categoryDTO.setId(categoryEntity.getId());
         categoryDTO.setName(categoryEntity.getName());
@@ -73,5 +87,5 @@ public class CategoryServiceImpl implements CategoryService {
         categoryEntity.setId(categoryDTO.getId());
         categoryEntity.setName(categoryDTO.getName());
         return categoryEntity;
-    }
+    }*/
 }

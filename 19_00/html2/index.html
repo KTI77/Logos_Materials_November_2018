@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML lesson 2</title>
+</head>
+<body>
+    
+    <!--  /movies POST  -->
+    <form action="/movies" method="POST">
+        <fieldset>
+            <legend>Анкета учасника опитування</legend>
+            <label for="username">Введіть ваше імя: </label>
+            <input type="text" id="username" placeholder="ваше імя">
+            <br>
+
+            <label for="user-email">Введіть ваш емейл</label>
+            <input type="email" id="user-email" placeholder="ваш емайл">
+            <br>
+
+            <label for="user-password">Ваш пароль</label>
+            <input type="password" id="user-password">
+            <br>
+
+            <label for="user-experiance">Вас досвід на посаді програміста: </label>
+            <input type="number" id="user-experiance">
+            <br>
+
+            <label>Ваш дата народження</label>
+            <input type="date">
+            <br>
+
+            <label>Коли ви почали працювати</label>
+            <input type="month">
+            <br>
+
+            <label>Ваш колір:</label>
+            <input type="color">
+            <br>
+            
+            <label>Вкажіть з якими технологіями ви працювали: </label>
+            <br>
+            <input type="checkbox" id="technol-1">
+            <label for="technol-1">HTML</label>
+
+            <input type="checkbox" id="technol-2">
+            <label for="technol-2">CSS</label>
+
+            <input type="checkbox" id="technol-3" checked>
+            <label for="technol-3">JS</label>
+
+            <br>
+
+            <label>Вкажіть вашу стать:</label> 
+            <br>
+            <input type="radio" id="male" name="user-type" checked>
+            <label for="male">Чоловік</label>       
+
+            <input type="radio" id="female" name="user-type">
+            <label for="female">Жінка</label> 
+
+            <input type="radio" id="other" name="user-type">
+            <label for="other">Інше</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Вкажіть вашого домашнього улюбленця</legend>
+            <select multiple>
+                <option>Собака</option>
+                <option>Кіт</option>
+                <option>Хомяк</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+                <option>Єнот</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Кілька слів про наше опитування</legend>
+            <textarea rows="5" cols="40">   
+            </textarea>
+        </fieldset>
+
+        <fieldset>
+            <input type="button" value="Надіслати">
+            <button type="button">Надіслати2</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

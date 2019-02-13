@@ -18,21 +18,12 @@ public class CategoryController {
     @PostMapping
     public ResponseEntity<?> create(@RequestBody CategoryDTO category) {
         CategoryDTO categoryDTO = categoryService.save(category);
-
-        if (categoryDTO == null) {
-            return new ResponseEntity<>(HttpStatus.CONFLICT); // 409
-        }
-
         return new ResponseEntity<>(categoryDTO, HttpStatus.OK);
     }
 
     @GetMapping("{categoryId}")
     public ResponseEntity<?> getById(@PathVariable("categoryId") Long id) {
         CategoryDTO categoryDTO = categoryService.findByCategoryId(id);
-
-        if (categoryDTO == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
         return new ResponseEntity<>(categoryDTO, HttpStatus.OK);
     }
 
