@@ -9,6 +9,7 @@ import ua.logos.entity.MovieEntity;
 import ua.logos.service.MovieService;
 import ua.logos.service.impl.MovieServiceImpl;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -20,7 +21,7 @@ public class MovieController {
 
     @PostMapping
     public ResponseEntity<?> createMovie(
-            @RequestBody MovieDTO movieDTO
+            @Valid @RequestBody MovieDTO movieDTO
     ) {
         movieService.saveMovie(movieDTO);
         return new ResponseEntity<>(HttpStatus.CREATED);

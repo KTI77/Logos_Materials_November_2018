@@ -8,6 +8,8 @@ import ua.logos.domain.CategoryDTO;
 import ua.logos.entity.CategoryEntity;
 import ua.logos.service.CategoryService;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("categories")
 public class CategoryController {
@@ -16,7 +18,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody CategoryDTO category) {
+    public ResponseEntity<?> create(@Valid @RequestBody CategoryDTO category) {
         CategoryDTO categoryDTO = categoryService.save(category);
         return new ResponseEntity<>(categoryDTO, HttpStatus.OK);
     }
