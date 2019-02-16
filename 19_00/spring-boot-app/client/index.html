@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      <link
+      rel="stylesheet"
+      href="css/main.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <form>
-            <label for="">Name: </label>
-            <input type="text" id="userName">
-            <br>
+        <h1 class="text-center">Users list</h1>
+      <form id="addUserForm">
+        <div class="form-group">
+          <label for="">Name: </label>
+          <input type="text" id="userName" class="form-control" />
+        </div>
 
-            <label for="">Email: </label>
-            <input type="email" id="userEmail">
-            <br>
+        <div class="form-group">
+          <label for="">Email: </label>
+          <input type="email" id="userEmail" class="form-control" />
+        </div>
 
-            <label for="">Password: </label>
-            <input type="password" id="userPassword">
-            <br>
+        <div class="form-group">
+          <label for="">Password: </label>
+          <input type="password" id="userPassword" class="form-control" />
+        </div>
 
-            <label for="">Confirm password: </label>
-            <input type="password" id="userPasswordConfirm">
-            <br>
+        <div class="form-group">
+          <label for="">Confirm password: </label>
+          <input
+            type="password"
+            id="userPasswordConfirm"
+            class="form-control"
+          />
+        </div>
 
-            <label for="">Sex: </label>
-            <select id="userSexType">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <br>
+        <div class="form-group">
+          <label for="">Sex: </label>
+          <select id="userSexType" class="form-control">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
 
-            <button type="button" id="btnRegister">Register</button>
-        </form>
+        <button type="button" id="btnRegister" class="btn btn-success btn-block">Register</button>
+      </form>
+
+      <br>
+
+      <table class="table" id="usersTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Sex</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
     </div>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/global.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
